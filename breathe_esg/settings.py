@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+import dj_database_url
 
 # Load environment variables from .env file
 load_dotenv()
@@ -70,11 +71,11 @@ WSGI_APPLICATION = 'breathe_esg.wsgi.application'
 # Database Setup (PostgreSQL with SQLite fallback for local development)
 if os.environ.get('DB_ENGINE') == 'sqlite' or not os.environ.get('DB_PASSWORD') or os.environ.get('DB_PASSWORD') == 'your_actual_password':
     DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
+    'default': dj_database_url.config(
+        default=os.environ.get('DATABASE_URL'),
+        conn_max_age=600
+    )
+}
 else:
     DATABASES = {
         'default': {
