@@ -3,21 +3,27 @@ from pathlib import Path
 from dotenv import load_dotenv
 import dj_database_url
 
-# Load environment variables from .env file
+
 load_dotenv()
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# SECURITY WARNING: keep the secret key used in production secret!
+
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-fallback-key-do-not-use-in-prod')
 
-# SECURITY WARNING: don't run with debug turned on in production!
+
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'testserver']
 
-# Application definition
+ALLOWED_HOSTS = os.environ.get(
+    'ALLOWED_HOSTS',
+    'localhost,127.0.0.1,testserver'
+).split(',')
+
+
+
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -69,24 +75,15 @@ TEMPLATES = [
 WSGI_APPLICATION = 'breathe_esg.wsgi.application'
 
 # Database Setup (PostgreSQL with SQLite fallback for local development)
-if os.environ.get('DB_ENGINE') == 'sqlite' or not os.environ.get('DB_PASSWORD') or os.environ.get('DB_PASSWORD') == 'your_actual_password':
-    DATABASES = {
+
+DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL'),
+        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
         conn_max_age=600
     )
 }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': os.environ.get('DB_NAME'),
-            'USER': os.environ.get('DB_USER'),
-            'PASSWORD': os.environ.get('DB_PASSWORD'),
-            'HOST': os.environ.get('DB_HOST', '127.0.0.1'),
-            'PORT': os.environ.get('DB_PORT', '5432'),
-        }
-    }
+
+
 
 
 # Password validation
@@ -123,9 +120,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # --- CORS Configuration ---
 # Allow requests from Vite dev server
+
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
+    "https://breathe-esg-frontend-eight.vercel.app",
 ]
+
 CORS_ALLOW_CREDENTIALS = True
 
 # --- Django REST Framework Configuration ---
