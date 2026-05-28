@@ -1,9 +1,10 @@
-# nixpacks.toml
-[phases.build]
-cmds = ["pip install -r requirements.txt"]
-
+toml id="h9e2jf"
 [phases.setup]
-nixPkgs = ["python311", "libpq"]
+nixPkgs = ["gcc"]
+
+[phases.install]
+cmds = ["pip install -r requirements.txt"]
 
 [start]
 cmd = "python manage.py migrate && gunicorn breathe_esg.wsgi:application --bind 0.0.0.0:$PORT"
+
