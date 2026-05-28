@@ -4,7 +4,7 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "startCommand": "python manage.py migrate && gunicorn breathe_esg.wsgi:application --bind 0.0.0.0:$PORT",
+    "startCommand": "python manage.py migrate && python manage.py loaddata ingestion/fixtures/initial_lookups.json && gunicorn breathe_esg.wsgi:application --bind 0.0.0.0:$PORT",
     "restartPolicyType": "ON_FAILURE",
     "restartPolicyMaxRetries": 10
   }
