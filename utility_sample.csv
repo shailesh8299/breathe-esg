@@ -1,0 +1,11 @@
+account_id,meter_id,site_name,billing_period_start,billing_period_end,consumption,consumption_unit,demand_kva,tariff_code,bill_amount,currency,state,supply_voltage
+ACCT-001,MTR-BOM-01,Mumbai HQ,2024-01-01,2024-01-31,48200,kWh,320,HT-I,965000,INR,Maharashtra,11kV
+ACCT-001,MTR-BOM-02,Mumbai Warehouse,2023-12-26,2024-01-25,12400,kWh,85,LT-II,198400,INR,Maharashtra,415V
+ACCT-001,MTR-DEL-01,Delhi Office,2024-01-05,2024-02-04,9800,kWh,62,NDPL-COM,186200,INR,Delhi,415V
+ACCT-001,MTR-CHN-01,Chennai Plant,2024-01-01,2024-01-31,71500,Units,480,HT-I,1287000,INR,Tamil Nadu,33kV
+ACCT-001,MTR-PUN-01,Pune Factory,2024-01-15,2024-02-14,33200,kWh,210,MSEDCL-HT,697200,INR,Maharashtra,11kV
+ACCT-001,MTR-BOM-03,Mumbai Canteen,,2024-01-31,1100,kWh,12,LT-I,18700,INR,Maharashtra,415V
+ACCT-001,MTR-HYD-01,Hyderabad DC,2024-01-01,2024-01-31,88400,MWh,610,TSSPDCL-HT,1945000,INR,Telangana,33kV
+ACCT-001,MTR-BOM-01,Mumbai HQ,2024-02-01,2024-02-29,51300,kWh,335,HT-I,1026000,INR,Maharashtra,11kV
+ACCT-001,MTR-AHM-01,Ahmedabad Plant,2024-01-01,2024-01-31,29700,kWh,195,DGVCL-HT,534600,INR,Gujarat,11kV
+ACCT-001,MTR-DEL-02,Delhi Warehouse,2024-01-01,2024-01-31,,kWh,45,NDPL-LT,88400,INR,Delhi,415V

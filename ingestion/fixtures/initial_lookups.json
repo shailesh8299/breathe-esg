@@ -1,0 +1,102 @@
+[
+  {
+    "model": "ingestion.plantlookup",
+    "pk": "d86b6255-7d5a-4933-bf9c-29b119a0a001",
+    "fields": {
+      "code": "PL01",
+      "name": "Mumbai Plant",
+      "state": "Maharashtra",
+      "country": "India"
+    }
+  },
+  {
+    "model": "ingestion.plantlookup",
+    "pk": "d86b6255-7d5a-4933-bf9c-29b119a0a002",
+    "fields": {
+      "code": "PL02",
+      "name": "Delhi NCR Plant",
+      "state": "Haryana",
+      "country": "India"
+    }
+  },
+  {
+    "model": "ingestion.plantlookup",
+    "pk": "d86b6255-7d5a-4933-bf9c-29b119a0a003",
+    "fields": {
+      "code": "PL03",
+      "name": "Chennai Plant",
+      "state": "Tamil Nadu",
+      "country": "India"
+    }
+  },
+  {
+    "model": "ingestion.plantlookup",
+    "pk": "d86b6255-7d5a-4933-bf9c-29b119a0a004",
+    "fields": {
+      "code": "PL04",
+      "name": "Pune Plant",
+      "state": "Maharashtra",
+      "country": "India"
+    }
+  },
+  {
+    "model": "ingestion.plantlookup",
+    "pk": "d86b6255-7d5a-4933-bf9c-29b119a0a005",
+    "fields": {
+      "code": "PL05",
+      "name": "Ahmedabad Plant",
+      "state": "Gujarat",
+      "country": "India"
+    }
+  },
+  {
+    "model": "ingestion.materiallookup",
+    "pk": "a93d0bb2-f8c6-4e55-bdc7-cb8b2f9f1001",
+    "fields": {
+      "code": "DIESEL-001",
+      "fuel_type": "Diesel",
+      "scope": 1,
+      "emission_factor_kg_per_litre": 2.68
+    }
+  },
+  {
+    "model": "ingestion.materiallookup",
+    "pk": "a93d0bb2-f8c6-4e55-bdc7-cb8b2f9f1002",
+    "fields": {
+      "code": "PETROL-002",
+      "fuel_type": "Petrol",
+      "scope": 1,
+      "emission_factor_kg_per_litre": 2.31
+    }
+  },
+  {
+    "model": "ingestion.materiallookup",
+    "pk": "a93d0bb2-f8c6-4e55-bdc7-cb8b2f9f1003",
+    "fields": {
+      "code": "HFO-003",
+      "fuel_type": "Heavy Fuel Oil",
+      "scope": 1,
+      "emission_factor_kg_per_litre": 3.17
+    }
+  },
+  {
+    "model": "ingestion.materiallookup",
+    "pk": "a93d0bb2-f8c6-4e55-bdc7-cb8b2f9f1004",
+    "fields": {
+      "code": "CNG-004",
+      "fuel_type": "CNG",
+      "scope": 1,
+      "emission_factor_kg_per_litre": 2.04
+    }
+  },
+  {
+    "model": "ingestion.materiallookup",
+    "pk": "a93d0bb2-f8c6-4e55-bdc7-cb8b2f9f1005",
+    "fields": {
+      "code": "LPG-005",
+      "fuel_type": "LPG",
+      "scope": 1,
+      "emission_factor_kg_per_litre": 1.51
+    }
+  }
+]

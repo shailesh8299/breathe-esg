@@ -1,0 +1,13 @@
+trip_id,expense_type,traveler_id,traveler_name,travel_date,origin,destination,distance_km,distance_provided,class_of_travel,nights,amount_inr,vendor,booking_ref
+TRP-001,FLIGHT,EMP-101,Priya Sharma,2024-01-08,BOM,DEL,,false,Economy,0,12400,IndiGo,6E-2341
+TRP-001,HOTEL,EMP-101,Priya Sharma,2024-01-08,,,0,false,,2,8600,Marriott Delhi,HTL-882
+TRP-002,FLIGHT,EMP-205,Rahul Verma,2024-01-10,DEL,LHR,,false,Business,0,189000,Air India,AI-111
+TRP-002,FLIGHT,EMP-205,Rahul Verma,2024-01-17,LHR,DEL,,false,Business,0,189000,Air India,AI-112
+TRP-003,FLIGHT,EMP-310,Sneha Patel,2024-01-12,BOM,BLR,,false,Economy,0,5200,IndiGo,6E-441
+TRP-003,CAR,EMP-310,Sneha Patel,2024-01-12,BLR,HSR Layout,18,true,,,1800,Ola,OLA-7721
+TRP-004,TRAIN,EMP-412,Amit Singh,2024-01-14,NDLS,BCT,1384,true,AC-2Tier,0,2200,IRCTC,PNR-4421
+TRP-005,FLIGHT,EMP-101,Priya Sharma,2024-01-20,DEL,MAA,,false,Economy,0,8900,SpiceJet,SG-771
+TRP-006,FLIGHT,EMP-501,Meera Nair,2024-01-22,COK,DXB,,false,Economy,0,14200,Emirates,EK-524
+TRP-007,FLIGHT,EMP-205,Rahul Verma,2024-02-01,BOM,SFO,,false,Business,0,245000,Air India,AI-179
+TRP-007,HOTEL,EMP-205,Rahul Verma,2024-02-01,,,0,false,,5,62000,Hyatt SF,HTL-991
+TRP-008,CAR,EMP-610,Dev Kumar,2024-01-25,MUM,PUNE,148,true,,,3200,Uber,UBR-3312
